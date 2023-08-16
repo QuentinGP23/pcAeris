@@ -1,0 +1,35 @@
+#card1{
+    background-image: url('/img/card-test.png');
+}
+#card2{
+    background-image: url('/img/card-test1.png');
+}
+#card3{
+    background-image: url('/img/card-test2.png');
+}
+
+.services{
+    .navbtn{
+        width: 100%;
+        display: flex;
+        a{
+            color: $white;
+            border:1px solid $white;
+            border-radius:32px;
+            padding:6px 12px;
+            text-decoration: none;
+            font-size:16px;
+            margin-right: 8px;
+            text-align: center;
+            transition: all ease-in-out .3s;
+            &:hover{
+                color: #000;
+                background-color:$white
+            }
+        }
+        a:last-of-type{
+            margin-left: auto;
+            margin-right: 0;
+        }
+    }
+}

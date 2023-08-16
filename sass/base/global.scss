@@ -1,0 +1,126 @@
+body{
+    background: var(--linear, linear-gradient(232deg, $blue3 0%, $blue2 100%));
+    margin: 0;
+    box-sizing: border-box;
+    color:$white;
+    font-family: 'Matonne', sans-serif;
+    main{
+        padding: 0 20px;
+        section{
+            margin-bottom: 3em;
+        }
+        .primeH{
+            font-size: 32px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: 129%;
+            position: relative;
+            width: fit-content;
+            max-width: 290px;
+            margin-top: 32px;
+            span{
+                color: $blue1;
+            }
+            &:before{
+                content: "";
+                width: 105px;
+                height: 15px;
+                background-color: $blue1;
+                position: absolute;
+                top:24px;
+                right: 0;
+                z-index: -1;
+            }
+        }
+        .secondaryH{
+            color: #FFF;
+            font-size: 21px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+            margin-bottom: 24px;
+        }
+        .btn{
+            border-radius: 16px;
+            padding: 5px 15px;
+            font-size: 18px;
+            color: $white;
+            text-decoration: none;
+            font-family:'Matonne', sans-serif;
+            background-color: $blue1;
+            border:1px solid $blue1;
+            transition: all ease-in-out .3s;
+            &:hover{
+                background:none;
+                border-color:$white;
+            }
+        }
+        .card{
+            width: calc(100% - 1em);
+            border-radius: 8px;
+            background-color: $white;
+            display: flex;
+            height: 150px;
+            justify-content: space-between;
+            align-items: flex-start;
+            gap: 16px;
+            overflow: hidden;
+            margin-bottom: 24px;
+            padding-right: 1em;
+            div{
+                height: 150px;
+                width: calc(45% + 16px);
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-position: center;
+            }
+            p{
+                color:#000;
+                font-weight: 600;
+                font-size: 24px;
+                margin: auto 0;
+                span{
+                    color:$blue1
+                }
+            }
+        }
+        .card2{
+            width: calc(100% - 1em);
+            border-radius: 8px;
+            background-color: $white;
+            display: flex;
+            flex-direction: column;
+            height: 250px;
+            overflow: hidden;
+            margin-bottom: 24px;
+            padding-right: 1em;
+            position: relative;
+            div{
+                background:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(/img/card-test.png);
+                background-repeat: no-repeat;
+                background-size: cover;
+                width: calc(100% + 1em - 16px*2);
+                height: calc(50% - 16px*2);
+                background-position: center;
+                font-size: 36px;
+                font-weight: 600;
+                padding: 16px;
+            }
+            p{
+                color:#000;
+                padding-left: calc(24px + 1em);
+                font-size: 16px;
+                position: relative;
+                &:before{
+                    content:'';
+                    width:3px;
+                    height:100%;
+                    background-color: $blue1;
+                    position: absolute;
+                    top:0;
+                    left: 24px;
+                }
+            }
+        }
+    }
+}

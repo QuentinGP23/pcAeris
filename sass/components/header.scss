@@ -1,0 +1,17 @@
+header{
+    height: 105px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    span{
+        font-family: 'Good Times BD', sans-serif;
+        color: $white;
+        font-size: 24px;
+        letter-spacing: 0.321px;
+        padding: 15px 0 0 20px;
+    }
+    nav{
+        background-color: $blue1;
+        cursor: pointer;
+    }
+}
