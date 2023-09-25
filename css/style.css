@@ -15,6 +15,8 @@ body {
 }
 body main {
   padding: 0 20px;
+  max-width: 1280px;
+  margin: 0 auto;
 }
 body main section {
   margin-bottom: 3em;
@@ -90,6 +92,7 @@ body main .card p {
   font-weight: 600;
   font-size: 24px;
   margin: auto 0;
+  height: fit-content;
 }
 body main .card p span {
   color: #305DFF;
@@ -118,6 +121,7 @@ body main .card2 div {
   padding: 16px;
 }
 body main .card2 p {
+  height: fit-content;
   color: #000;
   padding-left: calc(24px + 1em);
   font-size: 16px;
@@ -132,7 +136,66 @@ body main .card2 p:before {
   top: 0;
   left: 24px;
 }
+body footer {
+  display: flex;
+  justify-content: space-between;
+  max-width: 1280px;
+  margin: 0 auto;
+}
+body footer ul:first-of-type {
+  padding-inline-start: 20px;
+}
+body footer ul:first-of-type li:hover:before {
+  transform: translateX(-4px);
+}
+body footer ul:first-of-type li:before {
+  content: "";
+  background-image: url(/img/arrow.svg);
+  width: 20px;
+  height: 20px;
+  background-size: contain;
+  background-position: center;
+  display: inline-block;
+  position: relative;
+  top: 3px;
+  right: 6px;
+  transition: all 0.3s;
+}
+body footer ul li {
+  list-style: none;
+  height: 25px;
+}
+body footer ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 16px;
+}
+body footer ul li a:hover svg {
+  transform: translateX(-4px);
+}
+body footer ul li a svg {
+  margin-right: 6px;
+}
+body footer ul.RS {
+  padding-right: 20px;
+}
 
+@media (min-width: 769px) {
+  body main .card {
+    display: inline-flex;
+    width: 30%;
+  }
+  body main .card:not(:last-of-type) {
+    margin-right: 10px;
+  }
+  body main .card2 {
+    flex-direction: row;
+  }
+  body main .card2 div {
+    height: 100%;
+    width: 30%;
+  }
+}
 header {
   height: 105px;
   display: flex;

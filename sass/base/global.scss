@@ -6,6 +6,8 @@ body{
     font-family: 'Matonne', sans-serif;
     main{
         padding: 0 20px;
+        max-width:1280px;
+        margin:0 auto;
         section{
             margin-bottom: 3em;
         }
@@ -79,6 +81,7 @@ body{
                 font-weight: 600;
                 font-size: 24px;
                 margin: auto 0;
+                height:fit-content;
                 span{
                     color:$blue1
                 }
@@ -107,6 +110,7 @@ body{
                 padding: 16px;
             }
             p{
+                height: fit-content;
                 color:#000;
                 padding-left: calc(24px + 1em);
                 font-size: 16px;
@@ -119,6 +123,78 @@ body{
                     position: absolute;
                     top:0;
                     left: 24px;
+                }
+            }
+        }
+    }
+    footer{
+        display: flex;
+        justify-content: space-between;
+        max-width:1280px;
+        margin:0 auto;
+        ul:first-of-type{
+            padding-inline-start:20px;
+            li{
+                &:hover{
+                    &:before{
+                        transform: translateX(-4px);
+                    }
+                }
+                &:before{
+                    content: '';
+                    background-image: url(/img/arrow.svg);
+                    width:20px;
+                    height: 20px;
+                    background-size: contain;
+                    background-position: center;
+                    display: inline-block;
+                    position: relative;
+                    top:3px;
+                    right:6px;
+                    transition:all .3s;
+                }
+            }
+        }
+        ul{
+            li{
+                list-style: none;
+                height:25px;
+                a{
+                    color: #fff;
+                    text-decoration: none;
+                    font-size: 16px;
+                    &:hover{
+                        svg{
+                            transform: translateX(-4px);
+                        }
+                    }
+                    svg{
+                        margin-right:6px
+                    }
+                }
+            }
+        }
+        ul.RS{
+            padding-right: 20px;
+        }
+    }
+}
+
+@media (min-width:769px) {
+    body{
+        main{
+            .card{
+                display:inline-flex;
+                width:30%;
+            }
+            .card:not(:last-of-type){
+                margin-right: 10px;
+            }
+            .card2{
+                flex-direction: row;
+                div{
+                    height:100%;
+                    width:30%;
                 }
             }
         }
